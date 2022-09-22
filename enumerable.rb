@@ -1,12 +1,12 @@
 module MyEnumerable
-  def any?
-    each { |i| return true if yield(i) }
-    false
-  end
-
   def all?
     each { |i| return false if yield(i) }
     true
+  end
+
+  def any?
+    each { |i| return true if yield(i) }
+    false
   end
 
   def filter
@@ -15,4 +15,3 @@ module MyEnumerable
     filtered_arr
   end
 end
-
